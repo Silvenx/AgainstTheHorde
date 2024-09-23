@@ -14,6 +14,9 @@ Against the Horde/UnityPackageManager/
 /Against the Horde/[Ll]ogs/
 /Against the Horde/[Uu]ser[Ss]ettings/
 
+#Plastic SCM
+/Against the Horde/.plastic/
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /Against the Horde/[Mm]emoryCaptures/
