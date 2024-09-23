@@ -1,6 +1,3 @@
-Against the Horde/Library/
-Against the Horde/UnityPackageManager/
-
 # Created by https://www.toptal.com/developers/gitignore/api/unity,visualstudio
 # Edit at https://www.toptal.com/developers/gitignore?templates=unity,visualstudio
 
@@ -8,18 +5,18 @@ Against the Horde/UnityPackageManager/
 # This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
-/Against the Horde/[Ll]ibrary/
-/Against the Horde/[Tt]emp/
-/Against the Horde/[Oo]bj/
-/Against the Horde/[Ll]ogs/
-/Against the Horde/[Uu]ser[Ss]ettings/
+Against the Horde/[Ll]ibrary/
+Against the Horde/[Tt]emp/
+Against the Horde/[Oo]bj/
+Against the Horde/[Ll]ogs/
+Against the Horde/[Uu]ser[Ss]ettings/
 
 #Plastic SCM
 /Against the Horde/.plastic/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
-/Against the Horde/[Mm]emoryCaptures/
+Against the Horde/[Mm]emoryCaptures/
 
 # Recordings can get excessive in size
 /Against the Horde/[Rr]ecordings/
