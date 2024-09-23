@@ -25,7 +25,7 @@ Against the Horde/UnityPackageManager/
 # /[Aa]ssets/AssetStoreTools*
 
 # Visual Studio cache directory
-.vs/
+Against the Horde/.vs/
 
 # Build results
 Against the Horde/[Dd]ebug/
