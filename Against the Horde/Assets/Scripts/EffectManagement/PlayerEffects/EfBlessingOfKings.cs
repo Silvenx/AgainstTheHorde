@@ -5,54 +5,76 @@ using UnityEngine;
 public class EfBlessingOfKings : Effect
 {
     //Card Description: Give a monster 3 power and 3 life
+    //Card goes to the spell slot location and stays there 
     //Targets hovered monster
     //Give it 3 power 3 life
     //discard
 
+    public int powerIncrease = 3;
+    public int lifeIncrease = 3;
+    public Transform spellHoldArea;
+    public TurnMGR turnMGR;
+    public int cardEnergyCost;
+    public Texture2D targetCursorTexture;
+    private bool isTargeting = false;
+    public CardDetails cardDetails;
+    private GameObject currentCardGameObject;
+
+
     public override void Activate(GameObject cardGameObject)
     {
-        CardDetails playerCard = cardGameObject.GetComponent<CardDetails>();
-        PlayerFieldMGR playerFieldMGR = FindObjectOfType<PlayerFieldMGR>();
+        //Find the spell slot location, then set it as parent and place it there
+        GameObject spellHoldAreaObject = GameObject.Find("SpellHoldArea");
+        spellHoldArea = spellHoldAreaObject.transform;
+        cardGameObject.transform.SetParent(spellHoldArea, false);
+        cardGameObject.transform.position = spellHoldArea.position;
 
-        int powerIncrease = 2;
+        StartTargeting();
 
-        int slotIndex = playerFieldMGR.playerSlots.IndexOf(cardGameObject.transform.parent.gameObject);
-
-        ApplyCommanderEffect(playerFieldMGR, slotIndex, powerIncrease);
-
+        //turnMGR.currentEnergy = turnMGR.currentEnergy - cardEnergyCost; // take the cost away from current energy
+        //turnMGR.UpdateEnergyUI();
     }
 
-
-    private void ApplyCommanderEffect(PlayerFieldMGR playerFieldMGR, int slotIndex, int powerIncrease)
+    private void StartTargeting()
     {
-        int leftSlotIndex = slotIndex - 1;
-        int rightSlotIndex = slotIndex + 1;
-
-        if (leftSlotIndex >= 0)
-        {
-            ApplyPowerBonusToSlot(playerFieldMGR, leftSlotIndex, powerIncrease);
-        }
-
-        if (rightSlotIndex < playerFieldMGR.playerSlots.Count)
-        {
-            ApplyPowerBonusToSlot(playerFieldMGR, rightSlotIndex, powerIncrease);
-        }
+        isTargeting = true;
+        Cursor.SetCursor(targetCursorTexture, Vector2.zero, CursorMode.Auto);
     }
 
-    private void ApplyPowerBonusToSlot(PlayerFieldMGR playerFieldMGR, int slotIndex, int powerIncrease)
+    private void Update()
     {
-        GameObject slot = playerFieldMGR.playerSlots[slotIndex];
-        if (slot.transform.childCount > 0)
+        if (isTargeting && Input.GetMouseButton(0))
         {
-
-            GameObject adjacentMonster = slot.transform.GetChild(0).gameObject;
-            CardDetails adjacentMonsterDetails = adjacentMonster.GetComponent<CardDetails>();
-            if (adjacentMonsterDetails != null)
+            Debug.Log("Click Registered");
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
             {
-                adjacentMonsterDetails.cardPowerInt += powerIncrease;
-                adjacentMonsterDetails.cardPower.text = adjacentMonsterDetails.cardPowerInt.ToString();
-
+                GameObject hitObject = hit.collider.gameObject;
+                if (hitObject.CompareTag("MonsterCard"))
+                {
+                    Debug.Log("Found Monster Tag, registering effect");
+                    ApplyEffect(hitObject);
+                    EndTargeting();
+                }
             }
         }
     }
+
+    private void ApplyEffect(GameObject targetCard)
+    {
+        CardDetails stats = targetCard.GetComponent<CardDetails>();
+        stats.cardPowerInt += powerIncrease;
+        stats.cardLifeInt += lifeIncrease;
+
+        stats.UpdateCardUI();
+    }
+
+    private void EndTargeting()
+    {
+        isTargeting = false;
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto); // Reset the cursor
+        //PlayerFieldMGR.PlayerSpellToGraveyard(currentCardGameObject);
+    }
+
 }

@@ -68,7 +68,7 @@ public class CardDetails : MonoBehaviour
 
     }
 
-    void UpdateCardUI()
+    public void UpdateCardUI()
     {
         // Refresh the UI elements to match the current card stats in the database
         cardEnergy.text = cardEnergy.text;

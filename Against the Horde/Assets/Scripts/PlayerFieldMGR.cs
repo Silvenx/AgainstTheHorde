@@ -19,6 +19,7 @@ public class PlayerFieldMGR : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public CombatMGR combatMGR;
     public GraphicRaycaster raycaster;
     public EventSystem eventSystem;
+    public GraveyardMGR graveyardMGR;
 
     void Start()
     {
@@ -235,6 +236,20 @@ public class PlayerFieldMGR : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         {
             cardEffectDetails.TriggerEffects(TriggerType.PLAY);
         }
+    }
+
+    public void PlayerSpellToGraveyard(GameObject playerSpell)
+    {
+        Debug.Log("Player spell destroyed");
+        RectTransform playerGraveyard = GameObject.Find("PlayerGraveyard").GetComponent<RectTransform>();
+
+        playerSpell.transform.SetParent(playerGraveyard); //Set Graveyard as Parent
+        playerSpell.GetComponent<RectTransform>().anchoredPosition = Vector2.zero; //move to graveyard
+
+        //set state
+        //reset stats
+        //change state to player graveyard
+        graveyardMGR.playerGraveyard.Add(playerSpell); //add to graveyard list
     }
 
 }
