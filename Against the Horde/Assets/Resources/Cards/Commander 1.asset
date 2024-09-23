@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab456ec6d7a89e74aadfc84982cef108, type: 3}
+  m_Name: Commander 1
+  m_EditorClassIdentifier: 
+  cardName: Commander
+  description: 'Summon: give adjacent monsters 2 life'
+  energy: 3
+  power: 2
+  life: 2
+  cardType: Monster
+  cardAttribute: Human
+  ardBGEnergy: {fileID: 21300000, guid: 4164a1c977c20f143b510a0ead77d2aa, type: 3}
+  cardImage: {fileID: 21300000, guid: ee3737ff17fbfe646a5e5ca908451e68, type: 3}

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 11c1493dd36e1ee4383f042078fc7cab
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - cardPrefab: {fileID: 5586884228938999512, guid: 02b10268754690049b02882d46bda8c4, type: 3}
+  - combatCanvas: {instanceID: 0}
+  - deckPositionRect: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

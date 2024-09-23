@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab456ec6d7a89e74aadfc84982cef108, type: 3}
+  m_Name: PurpleTonk
+  m_EditorClassIdentifier: 
+  cardName: Purple Tonk
+  description: 'Tough \n Deal 1 damage back when hit by monsters '
+  energy: 0
+  power: 4
+  life: 4
+  cardType: 0
+  cardAttribute: Beast
+  cardImage: {fileID: 21300000, guid: d171aa46047852348800f6e8a03a1a96, type: 3}
+  cardBuffTough: 1
+  cardBuffDivine: 0
+  effects: []
