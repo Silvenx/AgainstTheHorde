@@ -141,9 +141,9 @@ public class PlayerFieldMGR : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public void playSpellCard(int cardEnergyCost)
     {
         //check if over play area
-        //set cardstate to field
+        cardStateCTRL.SetCardState(CombatReferences.CardState.Field); //set cardstate to field
 
-        //play audio clip
+        OnPlaySound();//play audio clip
         //play card effect on play
 
         //else put card back in hand
@@ -153,7 +153,6 @@ public class PlayerFieldMGR : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         //take energy cost
         //update energy UI
 
-        cardStateCTRL.SetCardState(CombatReferences.CardState.Field);
 
 
     }
