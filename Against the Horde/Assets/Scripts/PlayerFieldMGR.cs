@@ -91,19 +91,19 @@ public class PlayerFieldMGR : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
                     break;
 
                 case CardType.Spell:
-                    playSpellCard();
+                    playSpellCard(cardEnergyCost);
                     break;
 
                 case CardType.Equipment:
-                    playEquipmentCard();
+                    //playEquipmentCard();
                     break;
 
                 case CardType.Enchantment:
-                    playEnchantmentCard();
+                    //playEnchantmentCard();
                     break;
 
                 case CardType.Field:
-                    playFieldCard();
+                    //playFieldCard();
                     break;
 
                 default:
@@ -127,34 +127,10 @@ public class PlayerFieldMGR : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             turnMGR.UpdateEnergyUI();
 
             int slotIndex = playerSlots.IndexOf(currentSlot);
-
             combatMGR.playerMonsters[slotIndex] = gameObject;
 
-
-            //Play play sound
-            AudioClip playSound = cardDetails.cardData.cardPlaySound;
-
-            if (playSound != null)
-            {
-                AudioSource audioSource = GetComponent<AudioSource>();
-                if (audioSource == null)
-                {
-                    // If there is no AudioSource, add one to the GameObject
-                    audioSource = gameObject.AddComponent<AudioSource>();
-                }
-                audioSource.PlayOneShot(playSound);
-            }
-            else
-            {
-                Debug.LogWarning($"{cardDetails.cardName.text} does not have an assigned play sound.");
-            }
-
-            //Playing the effect of a card on play
-            CardEffectDetails cardEffectDetails = gameObject.GetComponent<CardEffectDetails>();
-            if (cardEffectDetails != null)
-            {
-                cardEffectDetails.TriggerEffects(TriggerType.PLAY);
-            }
+            OnPlaySound(); //trigger the on play sound
+            TriggerPlayEffect(); //trigger the on play effect
         }
         else
         {
@@ -165,10 +141,18 @@ public class PlayerFieldMGR : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public void playSpellCard(int cardEnergyCost)
     {
         //check if over play area
-        //-play spell card effect
-        //-set cardstate to field
-        //-take mana cost
-        if (
+        //set cardstate to field
+
+        //play audio clip
+        //play card effect on play
+
+        //else put card back in hand
+
+
+        //in the play 
+        //take energy cost
+        //update energy UI
+
         cardStateCTRL.SetCardState(CombatReferences.CardState.Field);
 
 
@@ -190,5 +174,34 @@ public class PlayerFieldMGR : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         }
     }
 
+    private void OnPlaySound()
+    {
+        AudioClip playSound = cardDetails.cardData.cardPlaySound;
+
+        if (playSound != null)
+        {
+            AudioSource audioSource = GetComponent<AudioSource>();
+            if (audioSource == null)
+            {
+                // If there is no AudioSource, add one to the GameObject
+                audioSource = gameObject.AddComponent<AudioSource>();
+            }
+            audioSource.PlayOneShot(playSound);
+        }
+        else
+        {
+            Debug.LogWarning($"{cardDetails.cardName.text} does not have an assigned play sound.");
+        }
+    }
+
+    private void TriggerPlayEffect()
+    {
+        //Playing the effect of a card on play
+        CardEffectDetails cardEffectDetails = gameObject.GetComponent<CardEffectDetails>();
+        if (cardEffectDetails != null)
+        {
+            cardEffectDetails.TriggerEffects(TriggerType.PLAY);
+        }
+    }
 
 }
