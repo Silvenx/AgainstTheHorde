@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PlayerFieldMGR : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 
@@ -16,7 +17,8 @@ public class PlayerFieldMGR : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     private GameObject currentSlot = null; // tracks the slot the card is hovering over
     public List<GameObject> playerSlots; //Player slots are assigned in the inspector
     public CombatMGR combatMGR;
-    //public PlayerCardEffects playerCardEffects;
+    public GraphicRaycaster raycaster;
+    public EventSystem eventSystem;
 
     void Start()
     {
@@ -27,6 +29,10 @@ public class PlayerFieldMGR : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         turnMGR = FindObjectOfType<TurnMGR>();
         cardDetails = GetComponent<CardDetails>(); // Get the CardDetails component to access the card's energy cost
         combatMGR = FindObjectOfType<CombatMGR>();
+
+        //Ensure raycaster is set on Canvas object
+        raycaster = FindObjectOfType<GraphicRaycaster>();
+        eventSystem = FindObjectOfType<EventSystem>();
 
         //This just runs through 1 - 5 and finds PlayerSlot plus the value then adds it to the list, easily can expand field here
         for (int i = 1; i <= 5; i++)
@@ -129,7 +135,7 @@ public class PlayerFieldMGR : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             int slotIndex = playerSlots.IndexOf(currentSlot);
             combatMGR.playerMonsters[slotIndex] = gameObject;
 
-            OnPlaySound(); //trigger the on play sound
+            TriggerOnPlaySound(); //trigger the on play sound
             TriggerPlayEffect(); //trigger the on play effect
         }
         else
@@ -141,17 +147,21 @@ public class PlayerFieldMGR : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public void playSpellCard(int cardEnergyCost)
     {
         //check if over play area
-        cardStateCTRL.SetCardState(CombatReferences.CardState.Field); //set cardstate to field
+        if (IsOverPlayArea())
+        {
+            Debug.Log("Card is over play area");
+            cardStateCTRL.SetCardState(CombatReferences.CardState.Field); //set cardstate to field
 
-        OnPlaySound();//play audio clip
-        //play card effect on play
+            TriggerOnPlaySound();//play audio clip
+            TriggerPlayEffect();//play card effect on play
+        }
 
         //else put card back in hand
-
-
-        //in the play 
-        //take energy cost
-        //update energy UI
+        else
+        {
+            Debug.Log("Card is not over play area!!");
+            playerHandMGR.AddCardToHand(gameObject);
+        }
 
 
 
@@ -173,7 +183,31 @@ public class PlayerFieldMGR : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         }
     }
 
-    private void OnPlaySound()
+    private bool IsOverPlayArea()
+    {
+        // Set up the PointerEventData with the current mouse position
+        PointerEventData pointerEventData = new PointerEventData(eventSystem);
+        pointerEventData.position = Input.mousePosition;
+
+        // Create a list to store the results of the raycast
+        List<RaycastResult> results = new List<RaycastResult>();
+
+        // Raycast using the GraphicRaycaster and mouse position
+        raycaster.Raycast(pointerEventData, results);
+
+        // Check if any UI element was hit by the raycast
+        foreach (RaycastResult result in results)
+        {
+            if (result.gameObject.CompareTag("SpellPlayableArea"))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    private void TriggerOnPlaySound()
     {
         AudioClip playSound = cardDetails.cardData.cardPlaySound;
 
