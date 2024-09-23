@@ -15,7 +15,7 @@ F:/GameDev/ATH Project/Against the Horde
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-53979
+57383
 Successfully changed project path to: F:/GameDev/ATH Project/Against the Horde
 F:/GameDev/ATH Project/Against the Horde
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,14 +49,14 @@ F:/GameDev/ATH Project/Against the Horde
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [17264]  Target information:
+Player connection [32988]  Target information:
 
-Player connection [17264]  * "[IP] 192.168.86.28 [Port] 0 [Flags] 2 [Guid] 4008605550 [EditorId] 4008605550 [Version] 1048832 [Id] WindowsEditor(7,Jax) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [32988]  * "[IP] 192.168.86.28 [Port] 0 [Flags] 2 [Guid] 3483275234 [EditorId] 3483275234 [Version] 1048832 [Id] WindowsEditor(7,Jax) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [17264] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [17264] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [32988] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [32988] Host joined alternative multi-casting on [225.0.0.222:34997]...
 [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-Refreshing native plugins compatible for Editor in 37.18 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 6.43 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.41f1 (0f988161febf)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.41f1/Editor/Data/Resources/UnitySubsystems
@@ -72,44 +72,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.41f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.41f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.41f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56480
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56356
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.41f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.012644 seconds.
-- Loaded All Assemblies, in  2.301 seconds
+Registered in 0.005182 seconds.
+- Loaded All Assemblies, in  0.486 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.449 seconds
-Domain Reload Profiling: 2748ms
-	BeginReloadAssembly (702ms)
+- Finished resetting the current domain, in  0.599 seconds
+Domain Reload Profiling: 1085ms
+	BeginReloadAssembly (195ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (885ms)
-	RebuildNativeTypeToScriptingClass (79ms)
-	initialDomainReloadingComplete (213ms)
-	LoadAllAssembliesAndSetupDomain (420ms)
-		LoadAssemblies (700ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (57ms)
+	LoadAllAssembliesAndSetupDomain (183ms)
+		LoadAssemblies (193ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (418ms)
-			TypeCache.Refresh (416ms)
-				TypeCache.ScanAssembly (385ms)
+		AnalyzeDomain (182ms)
+			TypeCache.Refresh (180ms)
+				TypeCache.ScanAssembly (165ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (449ms)
+	FinalizeReload (600ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (342ms)
+		SetupLoadedEditorAssemblies (488ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (15ms)
-			SetLoadedEditorAssemblies (12ms)
+			InitializePlatformSupportModulesInManaged (14ms)
+			SetLoadedEditorAssemblies (9ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (235ms)
-			ProcessInitializeOnLoadMethodAttributes (78ms)
+			ProcessInitializeOnLoadAttributes (227ms)
+			ProcessInitializeOnLoadMethodAttributes (235ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,54 +118,54 @@ Domain Reload Profiling: 2748ms
 Worker process is ready to serve import requests
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.819 seconds
+- Loaded All Assemblies, in  1.224 seconds
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.082 seconds
-Domain Reload Profiling: 1900ms
-	BeginReloadAssembly (272ms)
+- Finished resetting the current domain, in  2.139 seconds
+Domain Reload Profiling: 3360ms
+	BeginReloadAssembly (426ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (41ms)
-	RebuildCommonClasses (50ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (56ms)
-	LoadAllAssembliesAndSetupDomain (426ms)
-		LoadAssemblies (386ms)
+		CreateAndSetChildDomain (51ms)
+	RebuildCommonClasses (92ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (52ms)
+	LoadAllAssembliesAndSetupDomain (635ms)
+		LoadAssemblies (672ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (195ms)
-			TypeCache.Refresh (165ms)
-				TypeCache.ScanAssembly (148ms)
-			ScanForSourceGeneratedMonoScriptInfo (23ms)
+		AnalyzeDomain (230ms)
+			TypeCache.Refresh (199ms)
+				TypeCache.ScanAssembly (179ms)
+			ScanForSourceGeneratedMonoScriptInfo (24ms)
 			ResolveRequiredComponents (6ms)
-	FinalizeReload (1082ms)
+	FinalizeReload (2139ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (875ms)
+		SetupLoadedEditorAssemblies (1916ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (20ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (94ms)
-			ProcessInitializeOnLoadAttributes (717ms)
-			ProcessInitializeOnLoadMethodAttributes (45ms)
-			AfterProcessingInitializeOnLoad (6ms)
+			BeforeProcessingInitializeOnLoad (139ms)
+			ProcessInitializeOnLoadAttributes (1653ms)
+			ProcessInitializeOnLoadMethodAttributes (91ms)
+			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 3.02 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.09 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4060 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 38 unused Assets / (241.8 KB). Loaded Objects now: 4526.
-Memory consumption went from 145.1 MB to 144.9 MB.
-Total: 4.795200 ms (FindLiveObjects: 0.293200 ms CreateObjectMapping: 0.245800 ms MarkObjects: 4.030400 ms  DeleteObjects: 0.224400 ms)
+Unloading 38 unused Assets / (241.6 KB). Loaded Objects now: 4526.
+Memory consumption went from 145.4 MB to 145.1 MB.
+Total: 3.912900 ms (FindLiveObjects: 0.280700 ms CreateObjectMapping: 0.274700 ms MarkObjects: 3.152800 ms  DeleteObjects: 0.203000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -182,533 +182,134 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 36552.679182 seconds.
-  path: Assets/Scripts/CardData.cs
-  artifactKey: Guid(ab456ec6d7a89e74aadfc84982cef108) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/CardData.cs using Guid(ab456ec6d7a89e74aadfc84982cef108) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'cee212a13eb131972cb9b7033cefaef3') in 0.003544 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
 Received Prepare
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.739 seconds
+- Loaded All Assemblies, in  0.718 seconds
 Native extension for WindowsStandalone target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.816 seconds
-Domain Reload Profiling: 1555ms
-	BeginReloadAssembly (440ms)
+- Finished resetting the current domain, in  0.713 seconds
+Domain Reload Profiling: 1431ms
+	BeginReloadAssembly (405ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (278ms)
+		DisableScriptedObjects (253ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (39ms)
-	RebuildCommonClasses (38ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (28ms)
-	LoadAllAssembliesAndSetupDomain (221ms)
-		LoadAssemblies (287ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (28ms)
-			TypeCache.Refresh (10ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (11ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (816ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (613ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (6ms)
-			SetLoadedEditorAssemblies (3ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (65ms)
-			ProcessInitializeOnLoadAttributes (496ms)
-			ProcessInitializeOnLoadMethodAttributes (36ms)
-			AfterProcessingInitializeOnLoad (5ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (15ms)
-Refreshing native plugins compatible for Editor in 2.76 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4041 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (213.9 KB). Loaded Objects now: 4531.
-Memory consumption went from 141.1 MB to 140.9 MB.
-Total: 3.642800 ms (FindLiveObjects: 0.286800 ms CreateObjectMapping: 0.245900 ms MarkObjects: 2.948700 ms  DeleteObjects: 0.160200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:scripting/monoscript/fileName/CombatReferences.cs: 009185993bfc2544a12c8761a7c25c5b -> 604cd3ed104ef4c355e9b9089576a985
-  custom:scripting/monoscript/fileName/EfGlowstorm.cs: aef0d75453bddf81d78ef37f18035e62 -> f0e1b3a22255b859675ec1afdc623277
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:scripting/monoscript/fileName/EfCommander.cs: 097f180db6e1f316797f3c17e486a487 -> 4038a09e3429ae0a7499a69e87b92da7
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/PlayerDeckMGR.cs: a6848a8543fa2764e58d2a95fed93d5f -> 7713045e5df4f75376ef7c4e367de964
-  custom:scripting/monoscript/fileName/HordeFieldMGR.cs: ff974d30b0216a581c806a1928f24bde -> 6571e1ff57ff0a69a9949223fb72bb37
-  custom:scripting/monoscript/fileName/CardEffectDetails.cs: 39edd0f07769cee4c2181f630f772c0d -> 449cec2c3c28ec12669655981be35bd3
-  custom:scripting/monoscript/fileName/CardData.cs: 2d4348c966d297da604b29aa10c653e6 -> ff29352d81ab3a40706c7a187282264f
-  custom:scripting/monoscript/fileName/EfBlessingOfKings.cs: b748a6c59b9c40564b7a5d339bee7e1f -> 8a7e8c6c8366693144493f99517b7849
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/HordeDeckMGR.cs: 1e193bda6e32aa3be3ad61c3ea107c98 -> 6ab9da335411151b5748f32dbf6e19a6
-  custom:scripting/monoscript/fileName/EfMiretoad.cs: 9d5809086a52f28e02dd8af245b10718 -> 739ce60c65a5b8fac1d98e5414a76fe4
-  custom:scripting/monoscript/fileName/CombatMGR.cs: 8fa9bc53fd833f99d0e4b4c3eb7cf4b5 -> a1a15c00aa20cbed57b350591ab13759
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:scripting/monoscript/fileName/PlayerHandMGR.cs: 684cc48f01dfc04ca92c6cf01162d6cc -> 48993c0abe769fdc2fa73d65ab8df609
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:scripting/monoscript/fileName/TurnMGR.cs: 12b5d121e6331e63f7e12f351749a398 -> f9aabcadf51854e7d4f88cac4616813f
-  custom:scripting/monoscript/fileName/CardDetails.cs: 77fd08159fa0825cafd08818f5d97afe -> dde40ddec343986a8317c936ee24e5ac
-  custom:scripting/monoscript/fileName/Effect.cs: c7d94fc23adfad4a111a04199aa4ca5c -> 21395456d56b2db76788fed93b9fa697
-  custom:scripting/monoscript/fileName/EfCroak.cs: e9048ffa7a935e7f962a0ff923b1cb27 -> d1e928a869ec90611b5f5ee8ca20672f
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/HandHover.cs: 68728fbfd73bf5ddf43501f0cb5a57a7 -> 9758fd2621128e848c52ad0a95167782
-  custom:scripting/monoscript/fileName/CardStateCTRL.cs: 800862ae26550972e2f6d96687813412 -> baed96e89745838c31f758e2900c5bf3
-  custom:scripting/monoscript/fileName/GraveyardMGR.cs: 503162c834d5b794587270d331270423 -> e94b37c82d0e57ec78938fa5125c0844
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/PlayerFieldMGR.cs: b0a98c25c5a0189782cbcaf942fd0a91 -> 4eb8ff45ceb166cd9891e42e61da8100
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 8ae011121655f3169bb83cbcdab6e6b1 -> d6c373b37c0d320ed685648167180117
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.463 seconds
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.043 seconds
-Domain Reload Profiling: 1505ms
-	BeginReloadAssembly (177ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (13ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (36ms)
+		CreateAndSetChildDomain (40ms)
 	RebuildCommonClasses (32ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (27ms)
-	LoadAllAssembliesAndSetupDomain (215ms)
-		LoadAssemblies (283ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (239ms)
+		LoadAssemblies (294ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
 		AnalyzeDomain (27ms)
-			TypeCache.Refresh (9ms)
+			TypeCache.Refresh (11ms)
 				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (11ms)
-			ResolveRequiredComponents (7ms)
-	FinalizeReload (1043ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (569ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (63ms)
-			ProcessInitializeOnLoadAttributes (455ms)
-			ProcessInitializeOnLoadMethodAttributes (35ms)
-			AfterProcessingInitializeOnLoad (5ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-Refreshing native plugins compatible for Editor in 3.02 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4042 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (214.1 KB). Loaded Objects now: 4535.
-Memory consumption went from 141.4 MB to 141.2 MB.
-Total: 3.239100 ms (FindLiveObjects: 0.310500 ms CreateObjectMapping: 0.278800 ms MarkObjects: 2.484700 ms  DeleteObjects: 0.163800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:scripting/monoscript/fileName/CombatReferences.cs: 009185993bfc2544a12c8761a7c25c5b -> 604cd3ed104ef4c355e9b9089576a985
-  custom:scripting/monoscript/fileName/EfGlowstorm.cs: aef0d75453bddf81d78ef37f18035e62 -> f0e1b3a22255b859675ec1afdc623277
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:scripting/monoscript/fileName/EfCommander.cs: 097f180db6e1f316797f3c17e486a487 -> 4038a09e3429ae0a7499a69e87b92da7
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/PlayerDeckMGR.cs: a6848a8543fa2764e58d2a95fed93d5f -> 7713045e5df4f75376ef7c4e367de964
-  custom:scripting/monoscript/fileName/HordeFieldMGR.cs: ff974d30b0216a581c806a1928f24bde -> 6571e1ff57ff0a69a9949223fb72bb37
-  custom:scripting/monoscript/fileName/CardEffectDetails.cs: 39edd0f07769cee4c2181f630f772c0d -> 449cec2c3c28ec12669655981be35bd3
-  custom:scripting/monoscript/fileName/CardData.cs: 2d4348c966d297da604b29aa10c653e6 -> ff29352d81ab3a40706c7a187282264f
-  custom:scripting/monoscript/fileName/EfBlessingOfKings.cs: b748a6c59b9c40564b7a5d339bee7e1f -> 8a7e8c6c8366693144493f99517b7849
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/HordeDeckMGR.cs: 1e193bda6e32aa3be3ad61c3ea107c98 -> 6ab9da335411151b5748f32dbf6e19a6
-  custom:scripting/monoscript/fileName/EfMiretoad.cs: 9d5809086a52f28e02dd8af245b10718 -> 739ce60c65a5b8fac1d98e5414a76fe4
-  custom:scripting/monoscript/fileName/CombatMGR.cs: 8fa9bc53fd833f99d0e4b4c3eb7cf4b5 -> a1a15c00aa20cbed57b350591ab13759
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:scripting/monoscript/fileName/PlayerHandMGR.cs: 684cc48f01dfc04ca92c6cf01162d6cc -> 48993c0abe769fdc2fa73d65ab8df609
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:scripting/monoscript/fileName/TurnMGR.cs: 12b5d121e6331e63f7e12f351749a398 -> f9aabcadf51854e7d4f88cac4616813f
-  custom:scripting/monoscript/fileName/CardDetails.cs: 77fd08159fa0825cafd08818f5d97afe -> dde40ddec343986a8317c936ee24e5ac
-  custom:scripting/monoscript/fileName/Effect.cs: c7d94fc23adfad4a111a04199aa4ca5c -> 21395456d56b2db76788fed93b9fa697
-  custom:scripting/monoscript/fileName/EfCroak.cs: e9048ffa7a935e7f962a0ff923b1cb27 -> d1e928a869ec90611b5f5ee8ca20672f
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/HandHover.cs: 68728fbfd73bf5ddf43501f0cb5a57a7 -> 9758fd2621128e848c52ad0a95167782
-  custom:scripting/monoscript/fileName/CardStateCTRL.cs: 800862ae26550972e2f6d96687813412 -> baed96e89745838c31f758e2900c5bf3
-  custom:scripting/monoscript/fileName/GraveyardMGR.cs: 503162c834d5b794587270d331270423 -> e94b37c82d0e57ec78938fa5125c0844
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/PlayerFieldMGR.cs: b0a98c25c5a0189782cbcaf942fd0a91 -> 4eb8ff45ceb166cd9891e42e61da8100
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 8ae011121655f3169bb83cbcdab6e6b1 -> d6c373b37c0d320ed685648167180117
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.464 seconds
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.972 seconds
-Domain Reload Profiling: 1435ms
-	BeginReloadAssembly (167ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (13ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (37ms)
-	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (28ms)
-	LoadAllAssembliesAndSetupDomain (221ms)
-		LoadAssemblies (284ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (28ms)
-			TypeCache.Refresh (10ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (10ms)
+			ScanForSourceGeneratedMonoScriptInfo (9ms)
 			ResolveRequiredComponents (6ms)
-	FinalizeReload (972ms)
+	FinalizeReload (714ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (544ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (5ms)
-			SetLoadedEditorAssemblies (3ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (62ms)
-			ProcessInitializeOnLoadAttributes (436ms)
-			ProcessInitializeOnLoadMethodAttributes (33ms)
-			AfterProcessingInitializeOnLoad (5ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-Refreshing native plugins compatible for Editor in 2.50 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4042 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (214.1 KB). Loaded Objects now: 4539.
-Memory consumption went from 141.4 MB to 141.2 MB.
-Total: 3.590200 ms (FindLiveObjects: 0.270800 ms CreateObjectMapping: 0.252600 ms MarkObjects: 2.896000 ms  DeleteObjects: 0.169500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:scripting/monoscript/fileName/CombatReferences.cs: 009185993bfc2544a12c8761a7c25c5b -> 604cd3ed104ef4c355e9b9089576a985
-  custom:scripting/monoscript/fileName/EfGlowstorm.cs: aef0d75453bddf81d78ef37f18035e62 -> f0e1b3a22255b859675ec1afdc623277
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:scripting/monoscript/fileName/EfCommander.cs: 097f180db6e1f316797f3c17e486a487 -> 4038a09e3429ae0a7499a69e87b92da7
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/PlayerDeckMGR.cs: a6848a8543fa2764e58d2a95fed93d5f -> 7713045e5df4f75376ef7c4e367de964
-  custom:scripting/monoscript/fileName/HordeFieldMGR.cs: ff974d30b0216a581c806a1928f24bde -> 6571e1ff57ff0a69a9949223fb72bb37
-  custom:scripting/monoscript/fileName/CardEffectDetails.cs: 39edd0f07769cee4c2181f630f772c0d -> 449cec2c3c28ec12669655981be35bd3
-  custom:scripting/monoscript/fileName/CardData.cs: 2d4348c966d297da604b29aa10c653e6 -> ff29352d81ab3a40706c7a187282264f
-  custom:scripting/monoscript/fileName/EfBlessingOfKings.cs: b748a6c59b9c40564b7a5d339bee7e1f -> 8a7e8c6c8366693144493f99517b7849
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/HordeDeckMGR.cs: 1e193bda6e32aa3be3ad61c3ea107c98 -> 6ab9da335411151b5748f32dbf6e19a6
-  custom:scripting/monoscript/fileName/EfMiretoad.cs: 9d5809086a52f28e02dd8af245b10718 -> 739ce60c65a5b8fac1d98e5414a76fe4
-  custom:scripting/monoscript/fileName/CombatMGR.cs: 8fa9bc53fd833f99d0e4b4c3eb7cf4b5 -> a1a15c00aa20cbed57b350591ab13759
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:scripting/monoscript/fileName/PlayerHandMGR.cs: 684cc48f01dfc04ca92c6cf01162d6cc -> 48993c0abe769fdc2fa73d65ab8df609
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:scripting/monoscript/fileName/TurnMGR.cs: 12b5d121e6331e63f7e12f351749a398 -> f9aabcadf51854e7d4f88cac4616813f
-  custom:scripting/monoscript/fileName/CardDetails.cs: 77fd08159fa0825cafd08818f5d97afe -> dde40ddec343986a8317c936ee24e5ac
-  custom:scripting/monoscript/fileName/Effect.cs: c7d94fc23adfad4a111a04199aa4ca5c -> 21395456d56b2db76788fed93b9fa697
-  custom:scripting/monoscript/fileName/EfCroak.cs: e9048ffa7a935e7f962a0ff923b1cb27 -> d1e928a869ec90611b5f5ee8ca20672f
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/HandHover.cs: 68728fbfd73bf5ddf43501f0cb5a57a7 -> 9758fd2621128e848c52ad0a95167782
-  custom:scripting/monoscript/fileName/CardStateCTRL.cs: 800862ae26550972e2f6d96687813412 -> baed96e89745838c31f758e2900c5bf3
-  custom:scripting/monoscript/fileName/GraveyardMGR.cs: 503162c834d5b794587270d331270423 -> e94b37c82d0e57ec78938fa5125c0844
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/PlayerFieldMGR.cs: b0a98c25c5a0189782cbcaf942fd0a91 -> 4eb8ff45ceb166cd9891e42e61da8100
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 0d6d0571c0b18b8c77a03edae3837402 -> d6c373b37c0d320ed685648167180117
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.484 seconds
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.050 seconds
-Domain Reload Profiling: 1531ms
-	BeginReloadAssembly (169ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (13ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (35ms)
-	RebuildCommonClasses (33ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (28ms)
-	LoadAllAssembliesAndSetupDomain (239ms)
-		LoadAssemblies (297ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (34ms)
-			TypeCache.Refresh (12ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (14ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (1051ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (596ms)
+		SetupLoadedEditorAssemblies (554ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (6ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (63ms)
-			ProcessInitializeOnLoadAttributes (481ms)
-			ProcessInitializeOnLoadMethodAttributes (36ms)
-			AfterProcessingInitializeOnLoad (7ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (13ms)
-Refreshing native plugins compatible for Editor in 3.55 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4042 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (214.1 KB). Loaded Objects now: 4543.
-Memory consumption went from 141.4 MB to 141.2 MB.
-Total: 4.843000 ms (FindLiveObjects: 0.488600 ms CreateObjectMapping: 0.636800 ms MarkObjects: 3.464600 ms  DeleteObjects: 0.251500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:scripting/monoscript/fileName/CombatReferences.cs: 009185993bfc2544a12c8761a7c25c5b -> 604cd3ed104ef4c355e9b9089576a985
-  custom:scripting/monoscript/fileName/EfGlowstorm.cs: aef0d75453bddf81d78ef37f18035e62 -> f0e1b3a22255b859675ec1afdc623277
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:scripting/monoscript/fileName/EfCommander.cs: 097f180db6e1f316797f3c17e486a487 -> 4038a09e3429ae0a7499a69e87b92da7
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/PlayerDeckMGR.cs: a6848a8543fa2764e58d2a95fed93d5f -> 7713045e5df4f75376ef7c4e367de964
-  custom:scripting/monoscript/fileName/HordeFieldMGR.cs: ff974d30b0216a581c806a1928f24bde -> 6571e1ff57ff0a69a9949223fb72bb37
-  custom:scripting/monoscript/fileName/CardEffectDetails.cs: 39edd0f07769cee4c2181f630f772c0d -> 449cec2c3c28ec12669655981be35bd3
-  custom:scripting/monoscript/fileName/CardData.cs: 2d4348c966d297da604b29aa10c653e6 -> ff29352d81ab3a40706c7a187282264f
-  custom:scripting/monoscript/fileName/EfBlessingOfKings.cs: b748a6c59b9c40564b7a5d339bee7e1f -> 8a7e8c6c8366693144493f99517b7849
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/HordeDeckMGR.cs: 1e193bda6e32aa3be3ad61c3ea107c98 -> 6ab9da335411151b5748f32dbf6e19a6
-  custom:scripting/monoscript/fileName/EfMiretoad.cs: 9d5809086a52f28e02dd8af245b10718 -> 739ce60c65a5b8fac1d98e5414a76fe4
-  custom:scripting/monoscript/fileName/CombatMGR.cs: 8fa9bc53fd833f99d0e4b4c3eb7cf4b5 -> a1a15c00aa20cbed57b350591ab13759
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:scripting/monoscript/fileName/PlayerHandMGR.cs: 684cc48f01dfc04ca92c6cf01162d6cc -> 48993c0abe769fdc2fa73d65ab8df609
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:scripting/monoscript/fileName/TurnMGR.cs: 12b5d121e6331e63f7e12f351749a398 -> f9aabcadf51854e7d4f88cac4616813f
-  custom:scripting/monoscript/fileName/CardDetails.cs: 77fd08159fa0825cafd08818f5d97afe -> dde40ddec343986a8317c936ee24e5ac
-  custom:scripting/monoscript/fileName/Effect.cs: c7d94fc23adfad4a111a04199aa4ca5c -> 21395456d56b2db76788fed93b9fa697
-  custom:scripting/monoscript/fileName/EfCroak.cs: e9048ffa7a935e7f962a0ff923b1cb27 -> d1e928a869ec90611b5f5ee8ca20672f
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/HandHover.cs: 68728fbfd73bf5ddf43501f0cb5a57a7 -> 9758fd2621128e848c52ad0a95167782
-  custom:scripting/monoscript/fileName/CardStateCTRL.cs: 800862ae26550972e2f6d96687813412 -> baed96e89745838c31f758e2900c5bf3
-  custom:scripting/monoscript/fileName/GraveyardMGR.cs: 503162c834d5b794587270d331270423 -> e94b37c82d0e57ec78938fa5125c0844
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/PlayerFieldMGR.cs: b0a98c25c5a0189782cbcaf942fd0a91 -> 4eb8ff45ceb166cd9891e42e61da8100
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 0d6d0571c0b18b8c77a03edae3837402 -> d6c373b37c0d320ed685648167180117
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.448 seconds
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.005 seconds
-Domain Reload Profiling: 1451ms
-	BeginReloadAssembly (168ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (11ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (34ms)
-	RebuildCommonClasses (31ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (26ms)
-	LoadAllAssembliesAndSetupDomain (209ms)
-		LoadAssemblies (281ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (17ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (1005ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (574ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (6ms)
-			SetLoadedEditorAssemblies (3ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (66ms)
-			ProcessInitializeOnLoadAttributes (459ms)
+			BeforeProcessingInitializeOnLoad (59ms)
+			ProcessInitializeOnLoadAttributes (446ms)
 			ProcessInitializeOnLoadMethodAttributes (34ms)
 			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (14ms)
-Refreshing native plugins compatible for Editor in 3.76 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 2.49 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4042 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (214.0 KB). Loaded Objects now: 4547.
-Memory consumption went from 141.4 MB to 141.2 MB.
-Total: 4.266500 ms (FindLiveObjects: 0.355000 ms CreateObjectMapping: 0.253000 ms MarkObjects: 3.487800 ms  DeleteObjects: 0.169700 ms)
+Unloading 25 unused Assets / (213.9 KB). Loaded Objects now: 4531.
+Memory consumption went from 141.6 MB to 141.4 MB.
+Total: 3.490000 ms (FindLiveObjects: 0.282400 ms CreateObjectMapping: 0.289600 ms MarkObjects: 2.753200 ms  DeleteObjects: 0.163600 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:scripting/monoscript/fileName/CombatReferences.cs: 009185993bfc2544a12c8761a7c25c5b -> 604cd3ed104ef4c355e9b9089576a985
-  custom:scripting/monoscript/fileName/EfGlowstorm.cs: aef0d75453bddf81d78ef37f18035e62 -> f0e1b3a22255b859675ec1afdc623277
   custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:scripting/monoscript/fileName/EfCommander.cs: 097f180db6e1f316797f3c17e486a487 -> 4038a09e3429ae0a7499a69e87b92da7
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/PlayerDeckMGR.cs: a6848a8543fa2764e58d2a95fed93d5f -> 7713045e5df4f75376ef7c4e367de964
-  custom:scripting/monoscript/fileName/HordeFieldMGR.cs: ff974d30b0216a581c806a1928f24bde -> 6571e1ff57ff0a69a9949223fb72bb37
-  custom:scripting/monoscript/fileName/CardEffectDetails.cs: 39edd0f07769cee4c2181f630f772c0d -> 449cec2c3c28ec12669655981be35bd3
-  custom:scripting/monoscript/fileName/CardData.cs: 2d4348c966d297da604b29aa10c653e6 -> ff29352d81ab3a40706c7a187282264f
-  custom:scripting/monoscript/fileName/EfBlessingOfKings.cs: b748a6c59b9c40564b7a5d339bee7e1f -> 8a7e8c6c8366693144493f99517b7849
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/HordeDeckMGR.cs: 1e193bda6e32aa3be3ad61c3ea107c98 -> 6ab9da335411151b5748f32dbf6e19a6
-  custom:scripting/monoscript/fileName/EfMiretoad.cs: 9d5809086a52f28e02dd8af245b10718 -> 739ce60c65a5b8fac1d98e5414a76fe4
-  custom:scripting/monoscript/fileName/CombatMGR.cs: 8fa9bc53fd833f99d0e4b4c3eb7cf4b5 -> a1a15c00aa20cbed57b350591ab13759
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:scripting/monoscript/fileName/PlayerHandMGR.cs: 684cc48f01dfc04ca92c6cf01162d6cc -> 48993c0abe769fdc2fa73d65ab8df609
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:scripting/monoscript/fileName/TurnMGR.cs: 12b5d121e6331e63f7e12f351749a398 -> f9aabcadf51854e7d4f88cac4616813f
-  custom:scripting/monoscript/fileName/CardDetails.cs: 77fd08159fa0825cafd08818f5d97afe -> dde40ddec343986a8317c936ee24e5ac
-  custom:scripting/monoscript/fileName/Effect.cs: c7d94fc23adfad4a111a04199aa4ca5c -> 21395456d56b2db76788fed93b9fa697
-  custom:scripting/monoscript/fileName/EfCroak.cs: e9048ffa7a935e7f962a0ff923b1cb27 -> d1e928a869ec90611b5f5ee8ca20672f
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/HandHover.cs: 68728fbfd73bf5ddf43501f0cb5a57a7 -> 9758fd2621128e848c52ad0a95167782
-  custom:scripting/monoscript/fileName/CardStateCTRL.cs: 800862ae26550972e2f6d96687813412 -> baed96e89745838c31f758e2900c5bf3
-  custom:scripting/monoscript/fileName/GraveyardMGR.cs: 503162c834d5b794587270d331270423 -> e94b37c82d0e57ec78938fa5125c0844
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/PlayerFieldMGR.cs: b0a98c25c5a0189782cbcaf942fd0a91 -> 4eb8ff45ceb166cd9891e42e61da8100
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 0d6d0571c0b18b8c77a03edae3837402 -> d6c373b37c0d320ed685648167180117
 ========================================================================
 Received Prepare
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.456 seconds
+- Loaded All Assemblies, in  0.410 seconds
 Native extension for WindowsStandalone target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.072 seconds
-Domain Reload Profiling: 1526ms
-	BeginReloadAssembly (165ms)
+- Finished resetting the current domain, in  1.012 seconds
+Domain Reload Profiling: 1421ms
+	BeginReloadAssembly (148ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (11ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (34ms)
-	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (29ms)
-	LoadAllAssembliesAndSetupDomain (212ms)
-		LoadAssemblies (288ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (194ms)
+		LoadAssemblies (259ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (17ms)
+		AnalyzeDomain (16ms)
 			TypeCache.Refresh (8ms)
 				TypeCache.ScanAssembly (0ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (1072ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1012ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (617ms)
+		SetupLoadedEditorAssemblies (589ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (6ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (69ms)
-			ProcessInitializeOnLoadAttributes (495ms)
-			ProcessInitializeOnLoadMethodAttributes (35ms)
-			AfterProcessingInitializeOnLoad (6ms)
+			BeforeProcessingInitializeOnLoad (59ms)
+			ProcessInitializeOnLoadAttributes (476ms)
+			ProcessInitializeOnLoadMethodAttributes (39ms)
+			AfterProcessingInitializeOnLoad (7ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (15ms)
-Refreshing native plugins compatible for Editor in 3.95 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (13ms)
+Refreshing native plugins compatible for Editor in 2.54 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4042 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (214.1 KB). Loaded Objects now: 4551.
-Memory consumption went from 141.4 MB to 141.2 MB.
-Total: 4.861400 ms (FindLiveObjects: 0.350700 ms CreateObjectMapping: 0.298400 ms MarkObjects: 4.046700 ms  DeleteObjects: 0.164700 ms)
+Unloading 25 unused Assets / (213.6 KB). Loaded Objects now: 4535.
+Memory consumption went from 141.6 MB to 141.4 MB.
+Total: 3.793600 ms (FindLiveObjects: 0.349500 ms CreateObjectMapping: 0.367000 ms MarkObjects: 2.918100 ms  DeleteObjects: 0.158100 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:scripting/monoscript/fileName/CombatReferences.cs: 009185993bfc2544a12c8761a7c25c5b -> 604cd3ed104ef4c355e9b9089576a985
-  custom:scripting/monoscript/fileName/EfGlowstorm.cs: aef0d75453bddf81d78ef37f18035e62 -> f0e1b3a22255b859675ec1afdc623277
   custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:scripting/monoscript/fileName/EfCommander.cs: 097f180db6e1f316797f3c17e486a487 -> 4038a09e3429ae0a7499a69e87b92da7
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/PlayerDeckMGR.cs: a6848a8543fa2764e58d2a95fed93d5f -> 7713045e5df4f75376ef7c4e367de964
-  custom:scripting/monoscript/fileName/HordeFieldMGR.cs: ff974d30b0216a581c806a1928f24bde -> 6571e1ff57ff0a69a9949223fb72bb37
-  custom:scripting/monoscript/fileName/CardEffectDetails.cs: 39edd0f07769cee4c2181f630f772c0d -> 449cec2c3c28ec12669655981be35bd3
-  custom:scripting/monoscript/fileName/CardData.cs: 2d4348c966d297da604b29aa10c653e6 -> ff29352d81ab3a40706c7a187282264f
-  custom:scripting/monoscript/fileName/EfBlessingOfKings.cs: b748a6c59b9c40564b7a5d339bee7e1f -> 8a7e8c6c8366693144493f99517b7849
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/HordeDeckMGR.cs: 1e193bda6e32aa3be3ad61c3ea107c98 -> 6ab9da335411151b5748f32dbf6e19a6
-  custom:scripting/monoscript/fileName/EfMiretoad.cs: 9d5809086a52f28e02dd8af245b10718 -> 739ce60c65a5b8fac1d98e5414a76fe4
-  custom:scripting/monoscript/fileName/CombatMGR.cs: 8fa9bc53fd833f99d0e4b4c3eb7cf4b5 -> a1a15c00aa20cbed57b350591ab13759
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:scripting/monoscript/fileName/PlayerHandMGR.cs: 684cc48f01dfc04ca92c6cf01162d6cc -> 48993c0abe769fdc2fa73d65ab8df609
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:scripting/monoscript/fileName/TurnMGR.cs: 12b5d121e6331e63f7e12f351749a398 -> f9aabcadf51854e7d4f88cac4616813f
-  custom:scripting/monoscript/fileName/CardDetails.cs: 77fd08159fa0825cafd08818f5d97afe -> dde40ddec343986a8317c936ee24e5ac
-  custom:scripting/monoscript/fileName/Effect.cs: c7d94fc23adfad4a111a04199aa4ca5c -> 21395456d56b2db76788fed93b9fa697
-  custom:scripting/monoscript/fileName/EfCroak.cs: e9048ffa7a935e7f962a0ff923b1cb27 -> d1e928a869ec90611b5f5ee8ca20672f
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/HandHover.cs: 68728fbfd73bf5ddf43501f0cb5a57a7 -> 9758fd2621128e848c52ad0a95167782
-  custom:scripting/monoscript/fileName/CardStateCTRL.cs: 800862ae26550972e2f6d96687813412 -> baed96e89745838c31f758e2900c5bf3
-  custom:scripting/monoscript/fileName/GraveyardMGR.cs: 503162c834d5b794587270d331270423 -> e94b37c82d0e57ec78938fa5125c0844
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/PlayerFieldMGR.cs: b0a98c25c5a0189782cbcaf942fd0a91 -> 4eb8ff45ceb166cd9891e42e61da8100
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 0d6d0571c0b18b8c77a03edae3837402 -> d6c373b37c0d320ed685648167180117

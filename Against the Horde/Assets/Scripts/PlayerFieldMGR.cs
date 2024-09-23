@@ -81,58 +81,97 @@ public class PlayerFieldMGR : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         //will need an if statement here eventually to add in drop
         int cardEnergyCost = int.Parse(cardDetails.cardEnergy.text); //converts the text mesh to int
 
-        if (cardDetails.cardType == CardType.Monster)
+        if (cardEnergyCost <= turnMGR.currentEnergy &&
+                    (cardStateCTRL.currentState == CombatReferences.CardState.Hand || cardStateCTRL.currentState == CombatReferences.CardState.Dragging))
         {
-            if (cardEnergyCost <= turnMGR.currentEnergy &&
-            (cardStateCTRL.currentState == CombatReferences.CardState.Hand || cardStateCTRL.currentState == CombatReferences.CardState.Dragging))
+            switch (cardDetails.cardType)
             {
-                if (currentSlot != null) // Check if the card is over a valid slot
-                {
-                    cardStateCTRL.SetCardState(CombatReferences.CardState.Field);
+                case CardType.Monster:
+                    playMonsterCard(cardEnergyCost);
+                    break;
 
-                    transform.SetParent(currentSlot.transform, false);
-                    transform.position = currentSlot.transform.position;
-                    turnMGR.currentEnergy = turnMGR.currentEnergy - cardEnergyCost; // take the cost away from current energy
-                    turnMGR.UpdateEnergyUI();
+                case CardType.Spell:
+                    playSpellCard();
+                    break;
 
-                    int slotIndex = playerSlots.IndexOf(currentSlot);
+                case CardType.Equipment:
+                    playEquipmentCard();
+                    break;
 
-                    combatMGR.playerMonsters[slotIndex] = gameObject;
+                case CardType.Enchantment:
+                    playEnchantmentCard();
+                    break;
 
+                case CardType.Field:
+                    playFieldCard();
+                    break;
 
-                    //Play play sound
-                    AudioClip playSound = cardDetails.cardData.cardPlaySound;
-
-                    if (playSound != null)
-                    {
-                        AudioSource audioSource = GetComponent<AudioSource>();
-                        if (audioSource == null)
-                        {
-                            // If there is no AudioSource, add one to the GameObject
-                            audioSource = gameObject.AddComponent<AudioSource>();
-                        }
-                        audioSource.PlayOneShot(playSound);
-                    }
-                    else
-                    {
-                        Debug.LogWarning($"{cardDetails.cardName.text} does not have an assigned play sound.");
-                    }
-
-                    //Playing the effect of a card on play
-                    CardEffectDetails cardEffectDetails = gameObject.GetComponent<CardEffectDetails>();
-                    if (cardEffectDetails != null)
-                    {
-                        cardEffectDetails.TriggerEffects(TriggerType.PLAY);
-                    }
-                }
-                else
-                {
-                    playerHandMGR.AddCardToHand(gameObject);
-                }
-
+                default:
+                    Debug.LogWarning("Unknown card type.");
+                    playerHandMGR.AddCardToHand(gameObject); // If card type is unknown, return to hand
+                    break;
 
             }
         }
+    }
+
+    public void playMonsterCard(int cardEnergyCost)
+    {
+        if (currentSlot != null) // Check if the card is over a valid slot
+        {
+            cardStateCTRL.SetCardState(CombatReferences.CardState.Field);
+
+            transform.SetParent(currentSlot.transform, false);
+            transform.position = currentSlot.transform.position;
+            turnMGR.currentEnergy = turnMGR.currentEnergy - cardEnergyCost; // take the cost away from current energy
+            turnMGR.UpdateEnergyUI();
+
+            int slotIndex = playerSlots.IndexOf(currentSlot);
+
+            combatMGR.playerMonsters[slotIndex] = gameObject;
+
+
+            //Play play sound
+            AudioClip playSound = cardDetails.cardData.cardPlaySound;
+
+            if (playSound != null)
+            {
+                AudioSource audioSource = GetComponent<AudioSource>();
+                if (audioSource == null)
+                {
+                    // If there is no AudioSource, add one to the GameObject
+                    audioSource = gameObject.AddComponent<AudioSource>();
+                }
+                audioSource.PlayOneShot(playSound);
+            }
+            else
+            {
+                Debug.LogWarning($"{cardDetails.cardName.text} does not have an assigned play sound.");
+            }
+
+            //Playing the effect of a card on play
+            CardEffectDetails cardEffectDetails = gameObject.GetComponent<CardEffectDetails>();
+            if (cardEffectDetails != null)
+            {
+                cardEffectDetails.TriggerEffects(TriggerType.PLAY);
+            }
+        }
+        else
+        {
+            playerHandMGR.AddCardToHand(gameObject);
+        }
+    }
+
+    public void playSpellCard(int cardEnergyCost)
+    {
+        //check if over play area
+        //-play spell card effect
+        //-set cardstate to field
+        //-take mana cost
+        if (
+        cardStateCTRL.SetCardState(CombatReferences.CardState.Field);
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
