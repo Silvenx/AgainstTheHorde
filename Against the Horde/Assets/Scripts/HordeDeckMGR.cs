@@ -96,7 +96,7 @@ public class HordeDeckMGR : MonoBehaviour
                 CardEffectDetails cardComponent = drawnCard.GetComponent<CardEffectDetails>();
                 if (cardComponent != null)
                 {
-                    cardComponent.TriggerEffects(TriggerType.OnPlay);
+                    cardComponent.TriggerEffects(TriggerType.PLAY);
                 }
                 else
                 {
@@ -109,7 +109,7 @@ public class HordeDeckMGR : MonoBehaviour
                 CardEffectDetails cardComponent = drawnCard.GetComponent<CardEffectDetails>();
                 if (cardComponent != null)
                 {
-                    cardComponent.TriggerEffects(TriggerType.OnDraw);
+                    cardComponent.TriggerEffects(TriggerType.DRAW);
                 }
                 else
                 {

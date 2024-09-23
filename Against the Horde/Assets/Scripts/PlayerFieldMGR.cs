@@ -79,55 +79,59 @@ public class PlayerFieldMGR : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public void OnEndDrag(PointerEventData eventData)
     {
         //will need an if statement here eventually to add in drop
-        int cardEnergyCost = int.Parse(cardDetails.cardEnergy.text); //converts the text mesh to int then the next line checks energy
-        if (cardEnergyCost <= turnMGR.currentEnergy &&
-        (cardStateCTRL.currentState == CombatReferences.CardState.Hand || cardStateCTRL.currentState == CombatReferences.CardState.Dragging))
+        int cardEnergyCost = int.Parse(cardDetails.cardEnergy.text); //converts the text mesh to int
+
+        if (cardDetails.cardType == CardType.Monster)
         {
-            if (currentSlot != null) // Check if the card is over a valid slot
+            if (cardEnergyCost <= turnMGR.currentEnergy &&
+            (cardStateCTRL.currentState == CombatReferences.CardState.Hand || cardStateCTRL.currentState == CombatReferences.CardState.Dragging))
             {
-                cardStateCTRL.SetCardState(CombatReferences.CardState.Field);
-
-                transform.SetParent(currentSlot.transform, false);
-                transform.position = currentSlot.transform.position;
-                turnMGR.currentEnergy = turnMGR.currentEnergy - cardEnergyCost; // take the cost away from current energy
-                turnMGR.UpdateEnergyUI();
-
-                int slotIndex = playerSlots.IndexOf(currentSlot);
-
-                combatMGR.playerMonsters[slotIndex] = gameObject;
-
-
-                //Play play sound
-                AudioClip playSound = cardDetails.cardData.cardPlaySound;
-
-                if (playSound != null)
+                if (currentSlot != null) // Check if the card is over a valid slot
                 {
-                    AudioSource audioSource = GetComponent<AudioSource>();
-                    if (audioSource == null)
+                    cardStateCTRL.SetCardState(CombatReferences.CardState.Field);
+
+                    transform.SetParent(currentSlot.transform, false);
+                    transform.position = currentSlot.transform.position;
+                    turnMGR.currentEnergy = turnMGR.currentEnergy - cardEnergyCost; // take the cost away from current energy
+                    turnMGR.UpdateEnergyUI();
+
+                    int slotIndex = playerSlots.IndexOf(currentSlot);
+
+                    combatMGR.playerMonsters[slotIndex] = gameObject;
+
+
+                    //Play play sound
+                    AudioClip playSound = cardDetails.cardData.cardPlaySound;
+
+                    if (playSound != null)
                     {
-                        // If there is no AudioSource, add one to the GameObject
-                        audioSource = gameObject.AddComponent<AudioSource>();
+                        AudioSource audioSource = GetComponent<AudioSource>();
+                        if (audioSource == null)
+                        {
+                            // If there is no AudioSource, add one to the GameObject
+                            audioSource = gameObject.AddComponent<AudioSource>();
+                        }
+                        audioSource.PlayOneShot(playSound);
                     }
-                    audioSource.PlayOneShot(playSound);
+                    else
+                    {
+                        Debug.LogWarning($"{cardDetails.cardName.text} does not have an assigned play sound.");
+                    }
+
+                    //Playing the effect of a card on play
+                    CardEffectDetails cardEffectDetails = gameObject.GetComponent<CardEffectDetails>();
+                    if (cardEffectDetails != null)
+                    {
+                        cardEffectDetails.TriggerEffects(TriggerType.PLAY);
+                    }
                 }
                 else
                 {
-                    Debug.LogWarning($"{cardDetails.cardName.text} does not have an assigned play sound.");
+                    playerHandMGR.AddCardToHand(gameObject);
                 }
 
-                //Playing the effect of a card on play
-                CardEffectDetails cardEffectDetails = gameObject.GetComponent<CardEffectDetails>();
-                if (cardEffectDetails != null)
-                {
-                    cardEffectDetails.TriggerEffects(TriggerType.OnPlay);
-                }
-            }
-            else
-            {
-                playerHandMGR.AddCardToHand(gameObject);
-            }
 
-
+            }
         }
     }
 
