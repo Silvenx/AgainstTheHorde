@@ -16,10 +16,8 @@ public class EfBlessingOfKings : Effect
     public TurnMGR turnMGR;
     public int cardEnergyCost;
     public Texture2D targetCursorTexture;
-    private bool isTargeting = false;
     public CardDetails cardDetails;
-    private GameObject currentCardGameObject;
-
+    public PlayerFieldMGR playerFieldMGR;
 
     public override void Activate(GameObject cardGameObject)
     {
@@ -29,52 +27,42 @@ public class EfBlessingOfKings : Effect
         cardGameObject.transform.SetParent(spellHoldArea, false);
         cardGameObject.transform.position = spellHoldArea.position;
 
-        StartTargeting();
+        playerFieldMGR = FindObjectOfType<PlayerFieldMGR>();
+
+        TargetMGR targetingManager = FindObjectOfType<TargetMGR>();
+        if (targetingManager != null)
+        {
+            targetingManager.StartTargeting(this);
+        }
 
         //turnMGR.currentEnergy = turnMGR.currentEnergy - cardEnergyCost; // take the cost away from current energy
         //turnMGR.UpdateEnergyUI();
     }
 
-    private void StartTargeting()
+    public void ApplyEffect(CardDetails targetCard)
     {
-        isTargeting = true;
-        Cursor.SetCursor(targetCursorTexture, Vector2.zero, CursorMode.Auto);
-    }
 
-    private void Update()
-    {
-        if (isTargeting && Input.GetMouseButton(0))
+        targetCard.cardPowerInt += powerIncrease;
+        targetCard.cardPower.text = targetCard.cardPowerInt.ToString();
+        targetCard.cardLifeInt += lifeIncrease;
+        targetCard.cardLife.text = targetCard.cardLifeInt.ToString();
+
+        targetCard.UpdateCardUI();
+        Debug.Log("Effect applied to monster: +3 Power, +3 Life.");
+
+        GameObject spellCard = spellHoldArea.GetChild(0).gameObject;
+
+        if (playerFieldMGR != null)
         {
-            Debug.Log("Click Registered");
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
-            {
-                GameObject hitObject = hit.collider.gameObject;
-                if (hitObject.CompareTag("MonsterCard"))
-                {
-                    Debug.Log("Found Monster Tag, registering effect");
-                    ApplyEffect(hitObject);
-                    EndTargeting();
-                }
-            }
+            Debug.Log("Sending spell card to graveyard: " + spellCard.name);
+            playerFieldMGR.PlayerSpellToGraveyard(spellCard);  // Call the method on the instance
+        }
+        else
+        {
+            Debug.LogError("PlayerFieldMGR instance is null!");
         }
     }
 
-    private void ApplyEffect(GameObject targetCard)
-    {
-        CardDetails stats = targetCard.GetComponent<CardDetails>();
-        stats.cardPowerInt += powerIncrease;
-        stats.cardLifeInt += lifeIncrease;
 
-        stats.UpdateCardUI();
-    }
-
-    private void EndTargeting()
-    {
-        isTargeting = false;
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto); // Reset the cursor
-        //PlayerFieldMGR.PlayerSpellToGraveyard(currentCardGameObject);
-    }
 
 }

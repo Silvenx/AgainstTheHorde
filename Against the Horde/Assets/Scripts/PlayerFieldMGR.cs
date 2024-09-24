@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 using UnityEngine.EventSystems;
@@ -20,6 +21,7 @@ public class PlayerFieldMGR : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public GraphicRaycaster raycaster;
     public EventSystem eventSystem;
     public GraveyardMGR graveyardMGR;
+    public GameObject currentInPlaySpell; //tracks the spell that's currently in play so I can pull it from another script
 
     void Start()
     {
@@ -155,6 +157,8 @@ public class PlayerFieldMGR : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
             TriggerOnPlaySound();//play audio clip
             TriggerPlayEffect();//play card effect on play
+
+            currentInPlaySpell = gameObject;
         }
 
         //else put card back in hand

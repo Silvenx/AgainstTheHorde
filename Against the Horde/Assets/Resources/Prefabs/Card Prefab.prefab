@@ -1065,6 +1065,7 @@ MonoBehaviour:
   cardBuffTough: 0
   cardBuffDivine: 0
   effects: []
+  cardPlaySound: {fileID: 0}
 --- !u!114 &7037298019438115916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1106,6 +1107,9 @@ MonoBehaviour:
   playerSlots:
   - {fileID: 0}
   combatMGR: {fileID: 0}
+  raycaster: {fileID: 0}
+  eventSystem: {fileID: 0}
+  graveyardMGR: {fileID: 0}
 --- !u!50 &5391417199395718614
 Rigidbody2D:
   serializedVersion: 4
