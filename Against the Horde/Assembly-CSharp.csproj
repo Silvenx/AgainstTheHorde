@@ -74,14 +74,16 @@
     <Compile Include="Assets\Scripts\EffectManagement\HordeEffects\EfGlowstorm.cs" />
     <Compile Include="Assets\Scripts\HandHover.cs" />
     <Compile Include="Assets\Scripts\EffectManagement\HordeEffects\EfMiretoad.cs" />
+    <Compile Include="Assets\Scripts\EffectManagement\Targetting\TargetBlessingOfKings.cs" />
     <Compile Include="Assets\Scripts\TurnMGR.cs" />
     <Compile Include="Assets\Scripts\CombatReferences.cs" />
+    <Compile Include="Assets\Scripts\EffectManagement\PlayerEffects\EfFaithsGift.cs" />
     <Compile Include="Assets\Scripts\EffectManagement\Effect.cs" />
-    <Compile Include="Assets\Scripts\TargetMGR.cs" />
     <Compile Include="Assets\Scripts\CardEffectDetails.cs" />
     <Compile Include="Assets\Scripts\PlayerFieldMGR.cs" />
     <Compile Include="Assets\Scripts\EffectManagement\HordeEffects\EfCroak.cs" />
     <Compile Include="Assets\Scripts\EffectManagement\PlayerEffects\EfCommander.cs" />
+    <Compile Include="Assets\Scripts\EffectManagement\Targetting\TargetFaithsGift.cs" />
     <Compile Include="Assets\Scripts\HordeFieldMGR.cs" />
     <Compile Include="Assets\Scripts\CardData.cs" />
     <Compile Include="Assets\Scripts\GraveyardMGR.cs" />

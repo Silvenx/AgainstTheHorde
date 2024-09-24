@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems; // For checking UI interactions
 
-public class TargetMGR : MonoBehaviour
+public class TargetFaithsGift : MonoBehaviour
 {
     public Texture2D targetCursorTexture;
     private bool isTargeting = false;
-    private EfBlessingOfKings BokEffect;
+    private EfFaithsGift FaithsGiftEffect;
     public Camera mainCamera;
 
     void Update()
@@ -34,7 +34,7 @@ public class TargetMGR : MonoBehaviour
                     if (cardDetails != null && cardDetails.cardType == CardType.Monster)
                     {
                         Debug.Log("Monster found, applying effect.");
-                        BokEffect.ApplyEffect(cardDetails); // Apply effect via ScriptableObject
+                        FaithsGiftEffect.ApplyEffect(cardDetails); // Apply effect via ScriptableObject
                         EndTargeting();
                     }
                     else
@@ -50,17 +50,17 @@ public class TargetMGR : MonoBehaviour
         }
     }
 
-    public void StartTargeting(EfBlessingOfKings effect)
+    public void StartTargeting(EfFaithsGift effect)
     {
         isTargeting = true;
-        BokEffect = effect;
+        FaithsGiftEffect = effect;
         Cursor.SetCursor(targetCursorTexture, Vector2.zero, CursorMode.Auto);
     }
 
     public void EndTargeting()
     {
         isTargeting = false;
-        BokEffect = null;
+        FaithsGiftEffect = null;
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto); // Reset cursor
     }
 }

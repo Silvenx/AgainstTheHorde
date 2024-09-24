@@ -1,8 +1,8 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "CardEffects/EfBlessingOfKings")]
-public class EfBlessingOfKings : Effect
+[CreateAssetMenu(menuName = "CardEffects/EfFaithsGift")]
+public class EfFaithsGift : Effect
 {
     //Card Description: Give a monster 3 power and 3 life
     //Card goes to the spell slot location and stays there 
@@ -11,7 +11,7 @@ public class EfBlessingOfKings : Effect
     //discard
 
     public int powerIncrease = 3;
-    public int lifeIncrease = 3;
+    public int lifeIncrease = 0;
     public Transform spellHoldArea;
     public TurnMGR turnMGR;
     public int cardEnergyCost;
@@ -29,7 +29,7 @@ public class EfBlessingOfKings : Effect
 
         playerFieldMGR = FindObjectOfType<PlayerFieldMGR>();
 
-        TargetBlessingOfKings targetingManager = FindObjectOfType<TargetBlessingOfKings>();
+        TargetFaithsGift targetingManager = FindObjectOfType<TargetFaithsGift>();
         if (targetingManager != null)
         {
             targetingManager.StartTargeting(this);
@@ -46,9 +46,10 @@ public class EfBlessingOfKings : Effect
         targetCard.cardPower.text = targetCard.cardPowerInt.ToString();
         targetCard.cardLifeInt += lifeIncrease;
         targetCard.cardLife.text = targetCard.cardLifeInt.ToString();
+        targetCard.cardBuffDivine += 1;
 
         targetCard.UpdateCardUI();
-        Debug.Log("Effect applied to monster: +3 Power, +3 Life.");
+        Debug.Log("Effect applied to monster: +2 power and divine shield");
 
         GameObject spellCard = spellHoldArea.GetChild(0).gameObject;
 

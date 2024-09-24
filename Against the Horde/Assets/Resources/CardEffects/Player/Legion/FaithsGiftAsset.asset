@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4c3f10f00461f4458fabb47b6d697c8, type: 3}
+  m_Name: FaithsGiftAsset
+  m_EditorClassIdentifier: 
+  triggerType: 1
+  powerIncrease: 3
+  lifeIncrease: 0
+  spellHoldArea: {fileID: 0}
+  turnMGR: {fileID: 0}
+  cardEnergyCost: 0
+  targetCursorTexture: {fileID: 0}
+  cardDetails: {fileID: 0}
+  playerFieldMGR: {fileID: 0}
